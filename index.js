@@ -39,6 +39,7 @@ function svg2ttf(svgString, options) {
   font.height   = svgFont.height || svgFont.unitsPerEm;
   font.descent  = !isNaN(svgFont.descent) ? svgFont.descent : -font.vertOriginY;
   font.ascent   = svgFont.ascent || (font.unitsPerEm - font.vertOriginY);
+  font.usWinAscent = options.usWinAscent
 
   var glyphs = font.glyphs;
 
